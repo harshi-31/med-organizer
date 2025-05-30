@@ -1,0 +1,1 @@
+TESSERACT_PATH = r'E:\Tesseract\tesseract.exe'
