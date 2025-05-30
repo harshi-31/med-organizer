@@ -3,9 +3,13 @@ import pytesseract
 from PIL import Image
 
 # For Windows only: specify Tesseract path
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'E:\Tesseract\tesseract.exe'
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return "Server is up!"
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -15,4 +19,8 @@ def upload_file():
     return jsonify({'extracted_text': text})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
+'''@app.route('/', methods=['GET'])
+def home():
+    return "Welcome to Medical Report Organizer API!"'''
+
