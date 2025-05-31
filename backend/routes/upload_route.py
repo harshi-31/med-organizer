@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 import pytesseract
 from PIL import Image
 import os
+from utils.categorize import categorize_text
 
 # Optional: If you're on Windows, set the Tesseract path
 pytesseract.pytesseract.tesseract_cmd = r'E:\Tesseract\tesseract.exe'
@@ -21,6 +22,8 @@ def upload_file():
     try:
         image = Image.open(file.stream)
         extracted_text = pytesseract.image_to_string(image)
-        return jsonify({'extracted_text': extracted_text}), 200
+        text = pytesseract.image_to_string(image)
+        category = categorize_text(text)
+        return jsonify({'extracted_text': extracted_text,'category': category}), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
