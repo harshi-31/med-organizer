@@ -8,8 +8,7 @@ const UploadForm = () => {
   const [hospital, setHospital] = useState('');
   const [doctor, setDoctor]=useState('');
   const [date, setDate] = useState('');
-  //const [summary, setSummary] = useState('');
-
+  const [summary, setSummary] = useState('');
 
 
   const handleFileChange = (e) => {
@@ -29,7 +28,8 @@ const UploadForm = () => {
       setHospital(response.data.hospital); 
       setDoctor(response.data.doctor); 
       setDate(response.data.date);
-      //setSummary(response.data.summary);
+      setSummary(response.data.summary);
+
 
     } catch (err) {
       alert("Error uploading file");
@@ -56,12 +56,12 @@ const UploadForm = () => {
       {hospital && <p><strong>Hospital:</strong> {hospital}</p>}
       {doctor && <p><strong>Doctor:</strong> {doctor}</p>}
       {date && <p><strong>Date:</strong> {date}</p>}
-      {/*{summary && (
-        //<div>
+      {summary && (
+        <div>
           <h3>Summary:</h3>
           <p>{summary}</p>
         </div>
-      )}*/}
+)}
 
 
     </div>

@@ -6,7 +6,7 @@ from utils.categorize import categorize_text
 import re
 import cv2
 import numpy as np
-#from utils.summarizer import summarize_text
+from utils.summarizer import summarize_text
 
 pytesseract.pytesseract.tesseract_cmd = r'E:\Tesseract\tesseract.exe'
 def preprocess_image(file_stream):
@@ -83,14 +83,14 @@ def upload_file():
         category = categorize_text(text)
         hospital, doctor = extract_hospital_and_doctor(extracted_text)
         date = extract_dates(extracted_text)
-        #summary = summarize_text(extracted_text)
+        summary = summarize_text(extracted_text)
         return jsonify({
             'extracted_text': extracted_text,
             'category': category,
+            'summary': summary,
             'hospital': hospital,
             'doctor': doctor,
-            'date': date,
-            #'summary': summary,
+            'date': date
             }), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
