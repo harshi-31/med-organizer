@@ -1,0 +1,52 @@
+[
+  {
+    "text": "Patient consulted with Dr. Anjali Verma at Apollo Hospital, Bangalore.",
+    "doctor": "Dr. Anjali Verma",
+    "hospital": "Apollo Hospital"
+  },
+  {
+    "text": "Consultation done by Dr. Rakesh Khanna at AIIMS, New Delhi.",
+    "doctor": "Dr. Rakesh Khanna",
+    "hospital": "AIIMS"
+  },
+  {
+    "text": "Report prepared by Dr. Sneha Nair at Manipal Hospital, Hyderabad.",
+    "doctor": "Dr. Sneha Nair",
+    "hospital": "Manipal Hospital"
+  },
+  {
+    "text": "Dr. Amit Shah (Fortis Hospital, Mumbai) conducted the tests.",
+    "doctor": "Dr. Amit Shah",
+    "hospital": "Fortis Hospital"
+  },
+  {
+    "text": "Lab results analyzed by Dr. Meena Joshi from Max Hospital, Pune.",
+    "doctor": "Dr. Meena Joshi",
+    "hospital": "Max Hospital"
+  },
+  {
+    "text": "The patient was seen by Dr. Vikram Patel at Nanavati Hospital, Mumbai.",
+    "doctor": "Dr. Vikram Patel",
+    "hospital": "Nanavati Hospital"
+  },
+  {
+    "text": "Consultation record of Dr. Priya Reddy at Care Hospital, Hyderabad.",
+    "doctor": "Dr. Priya Reddy",
+    "hospital": "Care Hospital"
+  },
+  {
+    "text": "Follow-up done by Dr. Arvind Kumar at Columbia Asia Hospital, Gurgaon.",
+    "doctor": "Dr. Arvind Kumar",
+    "hospital": "Columbia Asia Hospital"
+  },
+  {
+    "text": "Diagnosis confirmed by Dr. Sanjay Rao at Ruby Hall Clinic, Pune.",
+    "doctor": "Dr. Sanjay Rao",
+    "hospital": "Ruby Hall Clinic"
+  },
+  {
+    "text": "Medical opinion provided by Dr. Ritu Singh of Sir Ganga Ram Hospital, Delhi.",
+    "doctor": "Dr. Ritu Singh",
+    "hospital": "Sir Ganga Ram Hospital"
+  }
+]

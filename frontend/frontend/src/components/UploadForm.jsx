@@ -5,6 +5,11 @@ const UploadForm = () => {
   const [file, setFile] = useState(null);
   const [extractedText, setExtractedText] = useState('');
   const [category, setCategory] = useState('');
+  const [hospital, setHospital] = useState('');
+  const [doctor, setDoctor]=useState('');
+  const [date, setDate] = useState('');
+  //const [summary, setSummary] = useState('');
+
 
 
   const handleFileChange = (e) => {
@@ -21,6 +26,11 @@ const UploadForm = () => {
       const response = await axios.post('http://localhost:8000/upload', formData);
       setExtractedText(response.data.extracted_text);
       setCategory(response.data.category);
+      setHospital(response.data.hospital); 
+      setDoctor(response.data.doctor); 
+      setDate(response.data.date);
+      //setSummary(response.data.summary);
+
     } catch (err) {
       alert("Error uploading file");
       console.error(err);
@@ -43,6 +53,17 @@ const UploadForm = () => {
           <h3>Category: {category}</h3>
         </div>
       )}
+      {hospital && <p><strong>Hospital:</strong> {hospital}</p>}
+      {doctor && <p><strong>Doctor:</strong> {doctor}</p>}
+      {date && <p><strong>Date:</strong> {date}</p>}
+      {/*{summary && (
+        //<div>
+          <h3>Summary:</h3>
+          <p>{summary}</p>
+        </div>
+      )}*/}
+
+
     </div>
   );
 
