@@ -7,6 +7,9 @@ import re
 import cv2
 import numpy as np
 from utils.summarizer import summarize_text
+import json
+import uuid
+from datetime import datetime
 
 pytesseract.pytesseract.tesseract_cmd = r'E:\Tesseract\tesseract.exe'
 def preprocess_image(file_stream):
@@ -32,6 +35,8 @@ def preprocess_image(file_stream):
     return pil_image
 
 ocr_bp = Blueprint('ocr', __name__)
+
+
 
 def extract_hospital_and_doctor(text):
     # Extract hospital name
@@ -84,13 +89,22 @@ def upload_file():
         hospital, doctor = extract_hospital_and_doctor(extracted_text)
         date = extract_dates(extracted_text)
         summary = summarize_text(extracted_text)
-        return jsonify({
+        result = {
             'extracted_text': extracted_text,
             'category': category,
             'summary': summary,
             'hospital': hospital,
             'doctor': doctor,
             'date': date
-            }), 200
+        }
+
+        # Save to JSON file
+        unique_id = uuid.uuid4().hex
+        timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+        filename = f"{timestamp}_{unique_id}.json"
+        with open(os.path.join('saved_reports', filename), 'w', encoding='utf-8') as f:
+            json.dump(result, f, ensure_ascii=False, indent=4)
+
+        return jsonify(result), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 500
