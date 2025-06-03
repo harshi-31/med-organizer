@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { ReportContext } from '../context/ReportContext';
 
 const UploadForm = () => {
   const [file, setFile] = useState(null);
@@ -9,6 +12,9 @@ const UploadForm = () => {
   const [doctor, setDoctor]=useState('');
   const [date, setDate] = useState('');
   const [summary, setSummary] = useState('');
+  const { addReport } = useContext(ReportContext);
+  const navigate = useNavigate();
+
 
 
   const handleFileChange = (e) => {
@@ -30,6 +36,16 @@ const UploadForm = () => {
       setDate(response.data.date);
       setSummary(response.data.summary);
 
+       /*await axios.post('http://localhost:8000/save-report', {
+        extracted_text,
+        category,
+        hospital,
+        doctor,
+        date,
+        summary,
+      });*/
+
+      navigate('/reports');
 
     } catch (err) {
       alert("Error uploading file");
