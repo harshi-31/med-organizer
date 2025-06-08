@@ -1,21 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useContext } from 'react';
 import axios from 'axios';
+import { ReportContext } from '../context/ReportContext';
 
 const ReportList = () => {
-  const [reports, setReports] = useState([]);
+  const { reports, addReport } = useContext(ReportContext);
 
   useEffect(() => {
     const fetchReports = async () => {
       try {
         const response = await axios.get('http://localhost:8000/reports');
-        setReports(response.data);
+        // Optionally populate context with backend data
+        response.data.forEach(report => addReport(report));
       } catch (err) {
         console.error('Error fetching reports:', err);
       }
     };
 
     fetchReports();
-  }, []);
+  }, [addReport]);
 
   return (
     <div>
