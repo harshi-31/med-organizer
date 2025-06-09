@@ -48,7 +48,6 @@ const UploadForm = () => {
       };
       addReport(newReport);
 
-      // Navigate to reports page
       navigate('/reports');
 
     } catch (err) {
@@ -82,5 +81,7 @@ const UploadForm = () => {
     </div>
   );
 };
+/*
+*/
 
 export default UploadForm;
