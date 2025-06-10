@@ -6,11 +6,15 @@ export const ReportProvider = ({ children }) => {
   const [reports, setReports] = useState([]);
 
   const addReport = (report) => {
-    setReports((prev) => [...prev, report]);
+    setReports(prev => Array.isArray(report) ? [...prev, ...report] : [...prev, report]);
+  };
+
+  const clearReports = () => {
+    setReports([]);
   };
 
   return (
-    <ReportContext.Provider value={{ reports, addReport }}>
+    <ReportContext.Provider value={{ reports, addReport, clearReports }}>
       {children}
     </ReportContext.Provider>
   );
