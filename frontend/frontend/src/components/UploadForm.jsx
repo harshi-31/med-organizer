@@ -11,7 +11,7 @@ const UploadForm = () => {
   const [doctor, setDoctor] = useState('');
   const [date, setDate] = useState('');
   const [summary, setSummary] = useState('');
-  const { addReport } = useContext(ReportContext);
+  //const { addReport } = useContext(ReportContext);
   const navigate = useNavigate();
 
   const handleFileChange = (e) => {
@@ -38,7 +38,7 @@ const UploadForm = () => {
       setSummary(summary);
 
       // Add report to context
-      const newReport = {
+      /*const newReport = {
         extracted_text,
         category,
         hospital,
@@ -46,7 +46,7 @@ const UploadForm = () => {
         date,
         summary
       };
-      addReport(newReport);
+      addReport(newReport);*/
 
       navigate('/reports');
 
@@ -81,7 +81,6 @@ const UploadForm = () => {
     </div>
   );
 };
-/*
-*/
+
 
 export default UploadForm;

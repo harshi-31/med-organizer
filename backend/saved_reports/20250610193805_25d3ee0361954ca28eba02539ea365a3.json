@@ -1,0 +1,8 @@
+{
+    "extracted_text": "ee\nPATIENT INFORMATION PERSCRIBING PHYSICIAN'S INFORMATION\nKemba Harris Dr. Alanah Gomez\n(555) 595-5999 (555) 505-5000\n11 Rosewcod Drive, 102 Trope Street,\nCollingwood, NY 33580 New York, NY 45568\nINVOICE NUMBER DATE INVOICE DUE DATE Amount DUE\n12245 07/01/23 07/30/23 $1,745.00\nITEM DESCRIPTION AMOUNT\nFull Check Up Full body check up $745.00\na : . . $1,000.00\nEar & Throat Examination Infection check due to inflammation\nNOTES SUBTOTAL $745.00\nAprescription has been written out for patient, TAXRATE 9%\nfor an acute throat infection.\nTAX $157.05\nTOTAL $1,902.05\nFa Concordia Hill Hospital For more information or any issues or concerns,\nwww.concordiahill.com email us at invoices@concordiahill.com\n",
+    "category": "Bill",
+    "summary": "$1,000.00\nEar & Throat Examination Infection check due to inflammation\nNOTES SUBTOTAL $745.00\nAprescription has been written out for patient, TAXRATE 9%\nfor an acute throat infection.\n DUE DATE Amount DUE\n12245 07/01/23 07/30/23 $1,745.00\nITEM DESCRIPTION AMOUNT\nFull Check Up Full body check up $745.00\na : . . TAX $157.05\nTOTAL $1,902.05\nFa Concordia Hill Hospital For more information or any issues or concerns,\nwww.concordiahill.com email us at invoices@concordiahill.com\n",
+    "hospital": "Fa Concordia Hill Hospital For more information or any issues or concerns,",
+    "doctor": "Dr. Alanah Gomez",
+    "date": "07/01/23"
+}

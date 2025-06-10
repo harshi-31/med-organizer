@@ -17,7 +17,7 @@ const ReportList = () => {
     };
 
     fetchReports();
-  }, [addReport]);
+  }, []);
 
   return (
     <div>
